@@ -10,3 +10,6 @@
 - [ ] two-sided crowding允许存在
 - [ ] crowding未成为独立买入排名
 - [ ] 数据缺失写UNKNOWN/LIMITED
+- [ ] DMI若使用，记录参数、+DI、-DI、ADX与数据时点
+- [ ] +DI/-DI只解释方向，ADX只解释强度；ADX上升未被误写成上涨
+- [ ] DMI交叉未单独触发买卖/排名，已与MA20/40、价格结构和量能交叉验证

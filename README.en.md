@@ -1,4 +1,4 @@
-# US equity screening · v2.1.0
+# US equity screening · v2.2.0
 
 Updated: 2026-10-02. Independently maintained. [中文](README.md)
 
@@ -21,7 +21,9 @@ Example request:
 Read [SKILL.md](SKILL.md) and required references, then use the assets templates. Adapt `assets/config.example.json` and `assets/evidence-ledger.example.json` in a working copy; examples are not market data. The host supplies authorized sources.
 
 ## Methodology
-Coverage audit → business quality and key contradictions → valuation and catalysts → two-sided crowding risk → technical overlay → candidate cards and exclusions. Usually 3–8 candidates; fewer or none are valid. News-only discovery is labeled lead_discovery.
+Coverage audit → business quality and key contradictions → valuation and catalysts → two-sided crowding risk → technical overlay (including DMI/ADX confirmation) → candidate cards and exclusions. Usually 3–8 candidates; fewer or none are valid. News-only discovery is labeled lead_discovery.
+
+DMI/ADX is a technical confirmation layer: +DI/-DI describe direction while ADX describes strength. Rising ADX does not mean price is rising, and DI crossovers are never standalone trade or ranking signals.
 
 Positioning / Crowding / Squeeze is a path-risk overlay, not a replacement for quality or valuation. High SI is Fuel, not automatically a Trigger or buy ranking. Record sources, timestamps, counterevidence, triggers and invalidation conditions.
 
@@ -44,7 +46,7 @@ MIGRATION-PROVENANCE.json # 来源文件校验与修改记录 / provenance
 ```
 
 ## Version maintenance
-Default branch: `main`. Use independent semantic versions; synchronize SKILL.md metadata, README, CHANGELOG and MIGRATION when changing versions. Review changes through branches and PRs; after validation, tag the intended commit with `vX.Y.Z` and publish a Release. Do not casually move published tags. `shared_rules_version` labels bundled rules, not an external runtime dependency. This migration preserves v2.1.0 and the 2026-10-02 rule update date.
+Default branch: `main`. Use independent semantic versions; synchronize SKILL.md metadata, README, CHANGELOG and MIGRATION when changing versions. Review changes through branches and PRs; after validation, tag the intended commit with `vX.Y.Z` and publish a Release. Do not casually move published tags. `shared_rules_version` labels bundled rules, not an external runtime dependency. This migration preserves v2.2.0 and the 2026-10-02 rule update date.
 
 ## Tests
 Python 3; standard library only. Run from repository root:
