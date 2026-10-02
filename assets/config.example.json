@@ -1,5 +1,5 @@
 {
-  "version": "2.1.0",
+  "version": "2.2.0",
   "skill_name": "us-equity-screening",
   "task": {
     "market_scanning": true,
@@ -15,5 +15,20 @@
     "gex_requires_dealer_assumption": true,
     "thirteen_f_is_delayed_proxy": true,
     "crowding_can_rank_alone": false
+  },
+  "technical": {
+    "dmi_enabled": true,
+    "dmi_period": 14,
+    "adx_bands": {
+      "weak_below": 20,
+      "emerging_from": 20,
+      "trending_from": 25,
+      "strong_above": 40
+    },
+    "direction_from_di": true,
+    "adx_direction_neutral": true,
+    "crossover_is_standalone_signal": false,
+    "require_ma_structure_volume_confirmation": true,
+    "missing_data": "UNKNOWN"
   }
 }
