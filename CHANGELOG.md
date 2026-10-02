@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 2.2.0 · 2026-10-02
+- 新增DMI/ADX趋势确认层：默认14周期，+DI/-DI判方向，ADX判趋势强度。
+- 强制区分方向与强度：ADX上升不等于上涨；-DI占优且ADX上升代表空头趋势增强。
+- DMI交叉不得单独触发买卖或候选排名，必须与MA20/40、价格结构和量能交叉验证。
+- 候选卡、配置、完整性检查、validator与合同测试同步加入DMI字段和规则。
+- 修复SKILL.md中不存在的`references/07-technical-overlay.md`引用，统一为`references/07-technical.md`。
+
 ## 2.1.0 · 2026-10-02
 - 新增Short squeeze与Long unwind/多杀多分析。
 - 新增Short Interest/Short Volume强制区分、13F/GEX限制、Fuel→Trigger→Feedback阶段。
