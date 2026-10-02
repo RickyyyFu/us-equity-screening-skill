@@ -1,4 +1,4 @@
-# 美股选股与机会筛选 · v2.1.0
+# 美股选股与机会筛选 · v2.2.0
 
 更新日期：2026-10-02。独立维护仓库。 [English](README.en.md)
 
@@ -21,7 +21,9 @@ git clone https://github.com/RickyyyFu/us-equity-screening-skill.git us-equity-s
 先读取 [SKILL.md](SKILL.md) 和对应必读 references；使用 assets 中的模板。`assets/config.example.json` 是配置示例，`assets/evidence-ledger.example.json` 是证据台账示例，请根据任务在工作副本中填写，不将示例当作真实行情。宿主需要自行提供已授权的数据来源。
 
 ## 方法论
-覆盖审计 → 经营质量与主要矛盾 → 估值与催化 → 双向拥挤度风险 → 技术覆盖 → 候选卡与排除理由；通常输出3—8个，可更少或为空，新闻线索降级为 lead_discovery。
+覆盖审计 → 经营质量与主要矛盾 → 估值与催化 → 双向拥挤度风险 → 技术覆盖（含DMI/ADX趋势确认） → 候选卡与排除理由；通常输出3—8个，可更少或为空，新闻线索降级为 lead_discovery。
+
+DMI/ADX只用于技术确认：+DI/-DI描述方向，ADX描述强度；ADX上升不等于上涨，DI交叉不得单独作为买卖或排名信号。
 
 Positioning / Crowding / Squeeze 只是路径风险覆盖层，不取代公司质量或估值；高 SI 是 Fuel，不自动构成 Trigger 或买入排名。每条论点注明来源、时点、反证、触发与失效条件。
 
@@ -44,7 +46,7 @@ MIGRATION-PROVENANCE.json # 来源文件校验与修改记录 / provenance
 ```
 
 ## 版本维护
-默认分支 `main`；独立使用语义版本号，修改后同步 SKILL.md metadata、README、CHANGELOG 与 MIGRATION。建议通过分支和 PR 评审；测试通过后为对应提交创建不可随意移动的 `vX.Y.Z` tag，并发布 Release。`shared_rules_version` 只是本包规则的版本标识，规则已随包提供，无跨仓库运行时依赖。当前版本和规则更新日期保留为 v2.1.0 / 2026-10-02。
+默认分支 `main`；独立使用语义版本号，修改后同步 SKILL.md metadata、README、CHANGELOG 与 MIGRATION。建议通过分支和 PR 评审；测试通过后为对应提交创建不可随意移动的 `vX.Y.Z` tag，并发布 Release。`shared_rules_version` 只是本包规则的版本标识，规则已随包提供，无跨仓库运行时依赖。当前版本和规则更新日期保留为 v2.2.0 / 2026-10-02。
 
 ## 测试
 Python 3，测试和 validator 仅用标准库；从仓库根目录运行：
