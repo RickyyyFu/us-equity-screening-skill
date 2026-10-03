@@ -7,6 +7,21 @@
 
 只筛选研究候选，不执行完整单公司深研，不自动调用其他 Skill。深研交接是人工研究流程，另一仓库不是运行时依赖。
 
+## 压缩包使用（无需 Git）
+
+1. 点击 [下载 ZIP 压缩包](https://github.com/RickyyyFu/us-equity-screening-skill/archive/refs/heads/main.zip)，保存到本地；也可以在仓库页面选择 **Code → Download ZIP**。
+2. 将 ZIP 上传给支持解压和读取包内文件的 Agent。
+3. 复制下面的启动指令，并替换最后的任务内容：
+
+```text
+请解压我上传的技能压缩包，找到并读取根目录的 SKILL.md，确认技能名称为 us-equity-screening。按入口要求读取 references 中的相关规则，并使用 assets 中的模板完成任务。先确认能访问包内文件；无法解压或读取时请明确告知。缺失数据标记 UNKNOWN/LIMITED，不编造数据。
+任务：在我提供的美股股票池中筛选研究候选，先说明覆盖率与缺失项，再输出候选卡和排除原因。
+```
+
+若 Agent 无法解压 ZIP，请在本地解压后，上传完整文件夹（平台支持时），或通过平台的本地 Skill 加载方式使用。GitHub 下载的目录通常名为 `us-equity-screening-skill-main`；若平台要求文件夹名与技能名一致，将其改为 `us-equity-screening`，并保留全部文件和相对路径。
+
+上传附件用于当前任务按包内规则执行，不一定会自动安装为长期可调用的技能。实时研究需要 Agent 能联网检索、访问已授权数据源，或读取用户提供的数据；压缩包不含行情服务、账户凭证或数据订阅。
+
 ## 安装
 ```sh
 git clone https://github.com/RickyyyFu/us-equity-screening-skill.git us-equity-screening
