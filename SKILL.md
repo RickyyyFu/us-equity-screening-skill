@@ -3,13 +3,13 @@ name: us-equity-screening
 description: "当用户要求在明确市场/行业/主题/股票池中寻找研究候选时使用。先审计覆盖，再按经营、估值、催化和Positioning/Crowding风险筛选；输出候选与排除原因，不做完整单标的深研，不因高Short Interest单独排名。"
 compatibility: "中文Markdown；真实行情、Short Interest、借券、期权与财务依赖宿主已授权来源。无券商连接、自动交易或后台服务。"
 metadata:
-  version: "2.2.0"
+  version: "2.2.1"
   shared_rules_version: "1.2.0"
   language: "zh-CN"
   updated: "2026-10-02"
 ---
 
-# 美股选股与机会筛选 v2.2.0
+# 美股选股与机会筛选 v2.2.1
 
 研究方法与条件模型，非个性化投资建议。完整单公司研究交给`single-stock-deep-research`；本包不自动运行另一包。
 
